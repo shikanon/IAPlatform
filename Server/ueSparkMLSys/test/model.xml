@@ -1,0 +1,116 @@
+<config>
+    <element>   <!-- 算法节点模板-->
+        <name></name>   <!-- 算法名称-->
+        <desc></desc>  <!-- 算法简要说明-->
+        <type></type>  <!-- 算法类型-->
+        <mainclass></mainclass> <!-- 算法主类位置-->
+        <pagename></pagename>  <!-- 程序jar包名称-->
+        <parameters>     <!-- 该算法的参数列表-->
+            <parameter>       <!--其中一个参数-->
+                <type></type>  <!--参数可选类型：in,out,int,bool,double,string -->
+                <value></value>  <!--参数的变量名-->
+
+                <default></default> <!--该参数默认值-->
+                <pardesc></pardesc> <!--该参数的说明-->
+            </parameter>
+            <parameter>       <!--其中一个参数-->
+                <type></type>  <!--参数可选类型：in,out,int,bool,double,string -->
+                <value></value>  <!--参数的变量名-->
+
+                <default></default> <!--该参数默认值-->
+                <pardesc></pardesc> <!--该参数的说明-->
+            </parameter>
+            <parameter>       <!--其中一个参数-->
+                <type></type>  <!--参数可选类型：in,out,int,bool,double,string -->
+
+                <par></par>   <!--参数在算法中的变量名-->
+                <default></default> <!--该参数默认值-->
+                <pardesc></pardesc> <!--该参数的说明-->
+            </parameter>
+        </parameters>
+    </element>
+
+    <element>   <!-- 算法节点模板-->
+        <name>决策树分类</name>   <!-- 算法名称-->
+        <desc>使用决策树进行分类</desc>  <!-- 算法简要说明-->
+        <type>分类</type>  <!-- 算法类型-->
+        <mainclass>com.ue.classifcation.binary.DecisionTreeClass_train</mainclass> <!-- 算法主类位置-->
+        <pagename>spark.jar</pagename>  <!-- 程序jar包名称-->
+        <parameters>     <!-- 该算法的参数列表-->
+            <parameter>       <!--其中一个参数-->
+                <type>in</type>  <!--参数可选类型：in,out,int,bool,double,string -->
+
+                <par>input_data</par>   <!--参数在算法中的变量名-->
+                <default>null</default> <!--该参数默认值-->
+                <pardesc>输入数据</pardesc> <!--该参数的说明-->
+            </parameter>
+            <parameter>       <!--其中一个参数-->
+                <type>out</type>  <!--参数可选类型：in,out,int,bool,double,string -->
+
+                <par>output_model</par>   <!--参数在算法中的变量名-->
+                <default>null</default> <!--该参数默认值-->
+                <pardesc>输出模型</pardesc> <!--该参数的说明-->
+            </parameter>
+            <parameter>       <!--其中一个参数-->
+                <type>string</type>  <!--参数可选类型：in,out,int,bool,double,string -->
+
+                <par>FeaturesFields</par>   <!--参数在算法中的变量名-->
+                <default>null</default> <!--该参数默认值-->
+                <pardesc>用于作为训练参数的列名称，多个列名称间使用@符号切割</pardesc> <!--该参数的说明-->
+            </parameter>
+
+            <parameter>       <!--其中一个参数-->
+                <type>string</type>  <!--参数可选类型：in,out,int,bool,double,string -->
+
+                <par>LabelFields</par>   <!--参数在算法中的变量名-->
+                <default></default> <!--该参数默认值-->
+                <pardesc></pardesc> <!--该参数的说明-->
+            </parameter>
+
+            <parameter>       <!--其中一个参数-->
+                <type></type>  <!--参数可选类型：in,out,int,bool,double,string -->
+
+                <par></par>   <!--参数在算法中的变量名-->
+                <default></default> <!--该参数默认值-->
+                <pardesc></pardesc> <!--该参数的说明-->
+            </parameter>
+
+            <parameter>       <!--其中一个参数-->
+                <type></type>  <!--参数可选类型：in,out,int,bool,double,string -->
+
+                <par></par>   <!--参数在算法中的变量名-->
+                <default></default> <!--该参数默认值-->
+                <pardesc></pardesc> <!--该参数的说明-->
+            </parameter>
+
+
+
+
+        </parameters>
+    </element>
+
+
+
+
+
+
+
+
+
+
+</config>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

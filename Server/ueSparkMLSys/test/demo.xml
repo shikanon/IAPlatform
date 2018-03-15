@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ResponseInfo>
+    <ResCode>Success</ResCode>
+    <ResMessage>Success</ResMessage>
+    <ErrorNo>0</ErrorNo>
+    <ResultToken>1_8_40_6109_20131226153050_3</ResultToken>
+    <Result pageindex="1">
+
+        <forms>
+            <form id="0" name="0二代身份证0" ver="2013-10-18">
+                <page id="0" name="身份证头像页">
+                    <cell id="0" name="姓名">
+                        <result result="张三" />
+                    </cell>
+                    <cell id="1" name="性别">
+                        <result result="男" />
+                    </cell>
+                    <cell id="2" name="民族">
+                        <result result="汉*" />
+                    </cell>
+                    <cell id="7" name="地址">
+                        <result result="北京市海淀区1号" />
+                    </cell>
+                    <cell id="8" name="身份证号码">
+                        <result result="222778778801010001" />
+                    </cell>
+                </page>
+            </form>
+        </forms>
+
+    </Result>
+</ResponseInfo>

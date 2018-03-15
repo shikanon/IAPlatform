@@ -1,0 +1,141 @@
+<graph>
+<widget type='dataset'>
+  <id>DataSet-15bc2ba1b9b-fe1c</id>
+  <moduleId>Dataset</moduleId>
+  <x>454</x>
+  <y>74</y>
+  <file>/EML/Data/Dataset</file>
+</widget>
+<widget type='program'>
+  <id>RMSE-15bc2b909a8-346a</id>
+  <moduleId>RMSE</moduleId>
+  <oozJob>0000001-170501074411311-oozie-root-W</oozJob>
+  <x>352</x>
+  <y>495</y>
+  <work_path>/EML/oozie/APP-PATH-bd13e472-381b-4fd1-9e29-42a36dc11a45/RMSE-15bc2b909a8-346a/</work_path>
+  <cmd_line>spark-submit --class bda.spark.runnable.evaluate.RMSERunner spark.jar --predict_pt /EML/oozie/APP-PATH-bd13e472-381b-4fd1-9e29-42a36dc11a45/GBRT_Predict-15bc2b9c369-f641/5BE7BEAE-135C-4F48-90C9-21EC291AEF89/5BE7BEAE-135C-4F48-90C9-21EC291AEF89</cmd_line>
+  <is_distributed>true</is_distributed>
+  <is_standalone_script>false</is_standalone_script>
+</widget>
+<widget type='program'>
+  <id>GBRT_Train-15bc2b99d06-b3a7</id>
+  <moduleId>GBRT_Train</moduleId>
+  <oozJob>0000001-170501074411311-oozie-root-W</oozJob>
+  <x>355</x>
+  <y>355</y>
+  <work_path>/EML/oozie/APP-PATH-bd13e472-381b-4fd1-9e29-42a36dc11a45/GBRT_Train-15bc2b99d06-b3a7/</work_path>
+  <file>F0665C46-A1FC-4C9F-BA6D-8C97D571A372</file>
+  <param>11:Variance</param>
+  <param>13:10</param>
+  <param>15:32</param>
+  <param>17:10000</param>
+  <param>19:15</param>
+  <param>21:1e-6</param>
+  <param>23:10</param>
+  <param>25:0.02</param>
+  <cmd_line>spark-submit --class bda.spark.runnable.tree.gbrt.Train spark.jar --train_pt /EML/oozie/APP-PATH-bd13e472-381b-4fd1-9e29-42a36dc11a45/File_split-15bc2b9d556-f370/13C2F84E-6FBA-46FC-BE81-CD047C15B138/13C2F84E-6FBA-46FC-BE81-CD047C15B138 --model_pt '' --cp_pt /EML/tmp --impurity 'Variance' --max_depth 10 --max_bins 32 --bin_samples 10000 --min_node_size 15 --min_info_gain 1e-6 --num_round 10 --learn_rate 0.02</cmd_line>
+  <is_distributed>true</is_distributed>
+  <is_standalone_script>false</is_standalone_script>
+</widget>
+<widget type='program'>
+  <id>File_split-15bc2b97594-306b</id>
+  <moduleId>File_split</moduleId>
+  <oozJob>0000001-170501074411311-oozie-root-W</oozJob>
+  <x>420</x>
+  <y>219</y>
+  <work_path>/EML/oozie/APP-PATH-bd13e472-381b-4fd1-9e29-42a36dc11a45/File_split-15bc2b97594-306b/</work_path>
+  <file>00008E8E-6BBC-45A6-A7F4-A6C499E2A3A7</file>
+  <file>AD415C51-4BAF-443C-868E-F0B59C744F1B</file>
+  <param>7:0.8</param>
+  <cmd_line>spark-submit --class bda.spark.runnable.preprocess.FileSplitRunner spark.jar --input_pt /EML/oozie/APP-PATH-bd13e472-381b-4fd1-9e29-42a36dc11a45/LibSVM2LabeledPoint-15bc2b9f8ca-3180/9EF6C361-1D0B-42D6-B0AA-C0CECA9586DC/9EF6C361-1D0B-42D6-B0AA-C0CECA9586DC --ratio 0.8 --output_pt1 '' --output_pt2 ''</cmd_line>
+  <is_distributed>true</is_distributed>
+  <is_standalone_script>false</is_standalone_script>
+</widget>
+<widget type='program'>
+  <id>GBRT_Predict-15bc2b9b546-d790</id>
+  <moduleId>GBRT_Predict</moduleId>
+  <oozJob>0000001-170501074411311-oozie-root-W</oozJob>
+  <x>531</x>
+  <y>435</y>
+  <work_path>/EML/oozie/APP-PATH-bd13e472-381b-4fd1-9e29-42a36dc11a45/GBRT_Predict-15bc2b9b546-d790/</work_path>
+  <file>9129BB64-6AB1-46F6-8E24-6F8A4A481998</file>
+  <cmd_line>spark-submit --class bda.spark.runnable.tree.gbrt.Predict spark.jar --model_pt /EML/oozie/APP-PATH-bd13e472-381b-4fd1-9e29-42a36dc11a45/GBRT_Train-15bc2b99d06-b3a7/F0665C46-A1FC-4C9F-BA6D-8C97D571A372/F0665C46-A1FC-4C9F-BA6D-8C97D571A372 --test_pt /EML/oozie/APP-PATH-bd13e472-381b-4fd1-9e29-42a36dc11a45/File_split-15bc2b97594-306b/AD415C51-4BAF-443C-868E-F0B59C744F1B/AD415C51-4BAF-443C-868E-F0B59C744F1B --predict_pt ''</cmd_line>
+  <is_distributed>true</is_distributed>
+  <is_standalone_script>false</is_standalone_script>
+</widget>
+<widget type='program'>
+  <id>File_split-15bc2b9d556-f370</id>
+  <moduleId>File_split</moduleId>
+  <oozJob>0000001-170501074411311-oozie-root-W</oozJob>
+  <x>401</x>
+  <y>286</y>
+  <work_path>/EML/oozie/APP-PATH-bd13e472-381b-4fd1-9e29-42a36dc11a45/File_split-15bc2b9d556-f370/</work_path>
+  <file>13C2F84E-6FBA-46FC-BE81-CD047C15B138</file>
+  <file>4537F376-6E1E-4CC5-B8C6-8F8680683767</file>
+  <param>7:0.6</param>
+  <cmd_line>spark-submit --class bda.spark.runnable.preprocess.FileSplitRunner spark.jar --input_pt /EML/oozie/APP-PATH-bd13e472-381b-4fd1-9e29-42a36dc11a45/File_split-15bc2b97594-306b/00008E8E-6BBC-45A6-A7F4-A6C499E2A3A7/00008E8E-6BBC-45A6-A7F4-A6C499E2A3A7 --ratio 0.6 --output_pt1 '' --output_pt2 ''</cmd_line>
+  <is_distributed>true</is_distributed>
+  <is_standalone_script>false</is_standalone_script>
+</widget>
+<widget type='program'>
+  <id>LibSVM2LabeledPoint-15bc2b9f8ca-3180</id>
+  <moduleId>LibSVM2LabeledPoint</moduleId>
+  <oozJob>0000001-170501074411311-oozie-root-W</oozJob>
+  <x>390</x>
+  <y>156</y>
+  <work_path>/EML/oozie/APP-PATH-bd13e472-381b-4fd1-9e29-42a36dc11a45/LibSVM2LabeledPoint-15bc2b9f8ca-3180/</work_path>
+  <file>9EF6C361-1D0B-42D6-B0AA-C0CECA9586DC</file>
+  <param>9:true</param>
+  <cmd_line>spark-submit --class bda.spark.runnable.formatTransform.LibSVM2LabeledPoint spark.jar --input_pt /EML/Data/Dataset/Dataset --output_pt '' --is_class true</cmd_line>
+  <is_distributed>true</is_distributed>
+  <is_standalone_script>false</is_standalone_script>
+</widget>
+<widget type='program'>
+  <id>GBRT_Predict-15bc2b9c369-f641</id>
+  <moduleId>GBRT_Predict</moduleId>
+  <oozJob>0000001-170501074411311-oozie-root-W</oozJob>
+  <x>347</x>
+  <y>434</y>
+  <work_path>/EML/oozie/APP-PATH-bd13e472-381b-4fd1-9e29-42a36dc11a45/GBRT_Predict-15bc2b9c369-f641/</work_path>
+  <file>5BE7BEAE-135C-4F48-90C9-21EC291AEF89</file>
+  <cmd_line>spark-submit --class bda.spark.runnable.tree.gbrt.Predict spark.jar --model_pt /EML/oozie/APP-PATH-bd13e472-381b-4fd1-9e29-42a36dc11a45/GBRT_Train-15bc2b99d06-b3a7/F0665C46-A1FC-4C9F-BA6D-8C97D571A372/F0665C46-A1FC-4C9F-BA6D-8C97D571A372 --test_pt /EML/oozie/APP-PATH-bd13e472-381b-4fd1-9e29-42a36dc11a45/File_split-15bc2b9d556-f370/4537F376-6E1E-4CC5-B8C6-8F8680683767/4537F376-6E1E-4CC5-B8C6-8F8680683767 --predict_pt ''</cmd_line>
+  <is_distributed>true</is_distributed>
+  <is_standalone_script>false</is_standalone_script>
+</widget>
+<edge>
+  <source>DataSet-15bc2ba1b9b-fe1c:0</source>
+  <destination>LibSVM2LabeledPoint-15bc2b9f8ca-3180:0</destination>
+</edge>
+<edge>
+  <source>LibSVM2LabeledPoint-15bc2b9f8ca-3180:0</source>
+  <destination>File_split-15bc2b97594-306b:0</destination>
+</edge>
+<edge>
+  <source>File_split-15bc2b97594-306b:0</source>
+  <destination>File_split-15bc2b9d556-f370:0</destination>
+</edge>
+<edge>
+  <source>File_split-15bc2b9d556-f370:0</source>
+  <destination>GBRT_Train-15bc2b99d06-b3a7:0</destination>
+</edge>
+<edge>
+  <source>File_split-15bc2b97594-306b:1</source>
+  <destination>GBRT_Predict-15bc2b9b546-d790:1</destination>
+</edge>
+<edge>
+  <source>GBRT_Train-15bc2b99d06-b3a7:0</source>
+  <destination>GBRT_Predict-15bc2b9b546-d790:0</destination>
+</edge>
+<edge>
+  <source>GBRT_Train-15bc2b99d06-b3a7:0</source>
+  <destination>GBRT_Predict-15bc2b9c369-f641:0</destination>
+</edge>
+<edge>
+  <source>File_split-15bc2b9d556-f370:1</source>
+  <destination>GBRT_Predict-15bc2b9c369-f641:1</destination>
+</edge>
+<edge>
+  <source>GBRT_Predict-15bc2b9c369-f641:0</source>
+  <destination>RMSE-15bc2b909a8-346a:0</destination>
+</edge>
+</graph>

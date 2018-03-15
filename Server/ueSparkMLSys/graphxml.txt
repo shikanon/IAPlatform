@@ -1,0 +1,133 @@
+<graph>
+  <widget type='dataset'>
+    <id>BDCI_predict-36DF67AA-0A96-461C-84C6-58078911115B-0</id>
+    <moduleId>36DF67AA-0A96-461C-84C6-58078911115B</moduleId>
+    <x>140px</x>
+    <y>11px</y>
+    <file>/EML/Data/36DF67AA-0A96-461C-84C6-58078911115B</file>
+  </widget>
+  <widget type='dataset'>
+    <id>豆瓣数据-Dataset-1</id>
+    <moduleId>Dataset</moduleId>
+    <x>286px</x>
+    <y>14px</y>
+    <file>/EML/Data/Dataset</file>
+  </widget>
+  <widget type='program'>
+    <id>支持向量机分类_Train-0920609F-3B2F-45EF-9CBA-69C8EBAD864A-2</id>
+    <moduleId>0920609F-3B2F-45EF-9CBA-69C8EBAD864A</moduleId>
+    <oozJob> </oozJob>
+    <x>84px</x>
+    <y>119px</y>
+    <work_path>EML/oozie/APP-PATH-u6587u4EF6u76EEu5F55/支持向量机分类_Train-0920609F-3B2F-45EF-9CBA-69C8EBAD864A-2</work_path>
+    <file>y22LabeledPointyu6570yu636Eyu6587yu4EF6y22y7Dy20</file>
+    <cmd_line>spark-submit --class bda.spark.runnable.tree.gbrt.Train spark.jar --input_input_pt  /EML/Data/36DF67AA-0A96-461C-84C6-58078911115B --output_output_pt /EML/oozie/APP-PATH-u6587u4EF6u76EEu5F55/支持向量机分类_Train-0920609F-3B2F-45EF-9CBA-69C8EBAD864A-2/y22LabeledPointyu6570yu636Eyu6587yu4EF6y22y7Dy20 --is_class true</cmd_line>
+    <is_distributed>true</is_distributed>
+    <is_standalone_script>false</is_standalone_script>
+  </widget>
+  <widget type='program'>
+    <id>朴素贝叶斯分类_Predict-721083D8-9D89-419D-A001-105B2865129A-3</id>
+    <moduleId>721083D8-9D89-419D-A001-105B2865129A</moduleId>
+    <oozJob> </oozJob>
+    <x>274px</x>
+    <y>111px</y>
+    <work_path>EML/oozie/APP-PATH-u6587u4EF6u76EEu5F55/朴素贝叶斯分类_Predict-721083D8-9D89-419D-A001-105B2865129A-3</work_path>
+    <file>y22LabeledPointyu6570yu636Eyu6587yu4EF6y22y7Dy20</file>
+    <cmd_line>spark-submit --class bda.spark.runnable.tree.gbrt.Train spark.jar --input_input_pt  /EML/Data/Dataset --output_output_pt /EML/oozie/APP-PATH-u6587u4EF6u76EEu5F55/朴素贝叶斯分类_Predict-721083D8-9D89-419D-A001-105B2865129A-3/y22LabeledPointyu6570yu636Eyu6587yu4EF6y22y7Dy20 --is_class GHTYHYTH</cmd_line>
+    <is_distributed>true</is_distributed>
+    <is_standalone_script>false</is_standalone_script>
+  </widget>
+  <widget type='program'>
+    <id>File_split-File_split-8</id>
+    <moduleId>File_split</moduleId>
+    <oozJob> </oozJob>
+    <x>300px</x>
+    <y>347px</y>
+    <work_path>EML/oozie/APP-PATH-u6587u4EF6u76EEu5F55/File_split-File_split-8</work_path>
+    <file>y22Output_file_1y28ratioy29y22y7Dy20</file>
+    <file>y22Output_fiey281-ratioy29y22y7Dy20</file>
+    <cmd_line>spark-submit --class bda.spark.runnable.tree.gbrt.Train spark.jar --input_input_pt  /EML/oozie/APP-PATH-u6587u4EF6u76EEu5F55/随机森林分类_Predict_5CA16CEB-1466-4576-9E22-AFB95E0ACA29-12/y22yu9884yu6D4Byu6587yu4EF6y22y7Dy20y20 --output_output_pt1 /EML/oozie/APP-PATH-u6587u4EF6u76EEu5F55/File_split-File_split-8/y22Output_file_1y28ratioy29y22y7Dy20 --output_output_pt2 /EML/oozie/APP-PATH-u6587u4EF6u76EEu5F55/File_split-File_split-8/y22Output_fiey281-ratioy29y22y7Dy20 --ratio 0.5</cmd_line>
+    <is_distributed>true</is_distributed>
+    <is_standalone_script>false</is_standalone_script>
+  </widget>
+  <widget type='program'>
+    <id>决策树分类_Predict-8EAC3182-0AFB-4100-9357-9C5265BC4A7D-9</id>
+    <moduleId>8EAC3182-0AFB-4100-9357-9C5265BC4A7D</moduleId>
+    <oozJob> </oozJob>
+    <x>34px</x>
+    <y>469px</y>
+    <work_path>EML/oozie/APP-PATH-u6587u4EF6u76EEu5F55/决策树分类_Predict-8EAC3182-0AFB-4100-9357-9C5265BC4A7D-9</work_path>
+    <file>y22LabeledPointyu6570yu636Eyu6587yu4EF6y22y7Dy20</file>
+    <cmd_line>spark-submit --class bda.spark.runnable.tree.gbrt.Train spark.jar --input_input_pt  /EML/oozie/APP-PATH-u6587u4EF6u76EEu5F55/File_split_File_split-8/y22Output_file_1y28ratioy29y22y7Dy20 --output_output_pt /EML/oozie/APP-PATH-u6587u4EF6u76EEu5F55/决策树分类_Predict-8EAC3182-0AFB-4100-9357-9C5265BC4A7D-9/y22LabeledPointyu6570yu636Eyu6587yu4EF6y22y7Dy20 --is_class true</cmd_line>
+    <is_distributed>true</is_distributed>
+    <is_standalone_script>false</is_standalone_script>
+  </widget>
+  <widget type='program'>
+    <id>支持向量机分类_Predict-ACDD29B2-6137-4A9D-BAEC-5410C392C968-10</id>
+    <moduleId>ACDD29B2-6137-4A9D-BAEC-5410C392C968</moduleId>
+    <oozJob> </oozJob>
+    <x>420px</x>
+    <y>448px</y>
+    <work_path>EML/oozie/APP-PATH-u6587u4EF6u76EEu5F55/支持向量机分类_Predict-ACDD29B2-6137-4A9D-BAEC-5410C392C968-10</work_path>
+    <file>y22LabeledPointyu6570yu636Eyu6587yu4EF6y22y7Dy20</file>
+    <cmd_line>spark-submit --class bda.spark.runnable.tree.gbrt.Train spark.jar --input_input_pt  /EML/oozie/APP-PATH-u6587u4EF6u76EEu5F55/File_split_File_split-8/y22Output_fiey281-ratioy29y22y7Dy20 --output_output_pt /EML/oozie/APP-PATH-u6587u4EF6u76EEu5F55/支持向量机分类_Predict-ACDD29B2-6137-4A9D-BAEC-5410C392C968-10/y22LabeledPointyu6570yu636Eyu6587yu4EF6y22y7Dy20 --is_class true</cmd_line>
+    <is_distributed>true</is_distributed>
+    <is_standalone_script>false</is_standalone_script>
+  </widget>
+  <widget type='program'>
+    <id>朴素贝叶斯分类_Train-DD1A30B6-6710-4B12-8ACC-41C27B4C0838-11</id>
+    <moduleId>DD1A30B6-6710-4B12-8ACC-41C27B4C0838</moduleId>
+    <oozJob> </oozJob>
+    <x>231px</x>
+    <y>480px</y>
+    <work_path>EML/oozie/APP-PATH-u6587u4EF6u76EEu5F55/朴素贝叶斯分类_Train-DD1A30B6-6710-4B12-8ACC-41C27B4C0838-11</work_path>
+    <file>y22LabeledPointyu6570yu636Eyu6587yu4EF6y22y7Dy20</file>
+    <cmd_line>spark-submit --class bda.spark.runnable.tree.gbrt.Train spark.jar --input_input_pt  /EML/oozie/APP-PATH-u6587u4EF6u76EEu5F55/File_split_File_split-8/y22Output_file_1y28ratioy29y22y7Dy20 --output_output_pt /EML/oozie/APP-PATH-u6587u4EF6u76EEu5F55/朴素贝叶斯分类_Train-DD1A30B6-6710-4B12-8ACC-41C27B4C0838-11/y22LabeledPointyu6570yu636Eyu6587yu4EF6y22y7Dy20 --is_class true</cmd_line>
+    <is_distributed>true</is_distributed>
+    <is_standalone_script>false</is_standalone_script>
+  </widget>
+  <widget type='program'>
+    <id>随机森林分类_Predict-5CA16CEB-1466-4576-9E22-AFB95E0ACA29-12</id>
+    <moduleId>5CA16CEB-1466-4576-9E22-AFB95E0ACA29</moduleId>
+    <oozJob> </oozJob>
+    <x>238px</x>
+    <y>242px</y>
+    <work_path>EML/oozie/APP-PATH-u6587u4EF6u76EEu5F55/随机森林分类_Predict-5CA16CEB-1466-4576-9E22-AFB95E0ACA29-12</work_path>
+    <file>y22yu9884yu6D4Byu6587yu4EF6y22y7Dy20y20</file>
+    <cmd_line>spark-submit --class bda.spark.runnable.tree.gbrt.Train spark.jar --input_model_pt  /EML/oozie/APP-PATH-u6587u4EF6u76EEu5F55/支持向量机分类_Train_0920609F-3B2F-45EF-9CBA-69C8EBAD864A-2/y22LabeledPointyu6570yu636Eyu6587yu4EF6y22y7Dy20  --input_test_pt  /EML/oozie/APP-PATH-u6587u4EF6u76EEu5F55/朴素贝叶斯分类_Predict_721083D8-9D89-419D-A001-105B2865129A-3/y22LabeledPointyu6570yu636Eyu6587yu4EF6y22y7Dy20 --output_predict_pt /EML/oozie/APP-PATH-u6587u4EF6u76EEu5F55/随机森林分类_Predict-5CA16CEB-1466-4576-9E22-AFB95E0ACA29-12/y22yu9884yu6D4Byu6587yu4EF6y22y7Dy20y20 </cmd_line>
+    <is_distributed>true</is_distributed>
+    <is_standalone_script>false</is_standalone_script>
+  </widget>
+  <edge>
+    <source>BDCI_predict-36DF67AA-0A96-461C-84C6-58078911115B-0:0.5</source>
+    <destination>支持向量机分类_Train-0920609F-3B2F-45EF-9CBA-69C8EBAD864A-2:0.5</destination>
+  </edge>
+  <edge>
+    <source>豆瓣数据-Dataset-1:0.5</source>
+    <destination>朴素贝叶斯分类_Predict-721083D8-9D89-419D-A001-105B2865129A-3:0.5</destination>
+  </edge>
+  <edge>
+    <source>支持向量机分类_Train-0920609F-3B2F-45EF-9CBA-69C8EBAD864A-2:0.5</source>
+    <destination>随机森林分类_Predict-5CA16CEB-1466-4576-9E22-AFB95E0ACA29-12:0</destination>
+  </edge>
+  <edge>
+    <source>朴素贝叶斯分类_Predict-721083D8-9D89-419D-A001-105B2865129A-3:0.5</source>
+    <destination>随机森林分类_Predict-5CA16CEB-1466-4576-9E22-AFB95E0ACA29-12:1</destination>
+  </edge>
+  <edge>
+    <source>File_split-File_split-8:0</source>
+    <destination>决策树分类_Predict-8EAC3182-0AFB-4100-9357-9C5265BC4A7D-9:0.5</destination>
+  </edge>
+  <edge>
+    <source>File_split-File_split-8:1</source>
+    <destination>支持向量机分类_Predict-ACDD29B2-6137-4A9D-BAEC-5410C392C968-10:0.5</destination>
+  </edge>
+  <edge>
+    <source>File_split-File_split-8:0</source>
+    <destination>朴素贝叶斯分类_Train-DD1A30B6-6710-4B12-8ACC-41C27B4C0838-11:0.5</destination>
+  </edge>
+  <edge>
+    <source>随机森林分类_Predict-5CA16CEB-1466-4576-9E22-AFB95E0ACA29-12:0.5</source>
+    <destination>File_split-File_split-8:0.5</destination>
+  </edge>
+</graph>
