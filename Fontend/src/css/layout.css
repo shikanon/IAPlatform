@@ -1,0 +1,68 @@
+/*
+*{margin: 0;padding: 0;}
+html,body,.myContainer{width: 100%;}
+.myContainer{min-width: 1035px;}
+input[type="file"]:focus{outline: none!important;}
+input[type="file"]{display: inline-block!important;}
+#faceLabel{width: 290px;height: 30px;border: 1px solid #d4d9dc;margin-bottom: 25px;padding-left: 5px;}*/
+/*.myContainer{background-color:#f3f5f7;}*/
+/*.myBtn{height: 40px;width: 98%;margin: 0 auto;}
+.return,.mySubmit{width: 100px;height: 30px;display: inline-block;background-color: #7cd434!important;text-decoration: none;color:#fff;float: right;border-radius: 50px;text-align: center;line-height: 30px;cursor: pointer;margin-top: 3px}
+.return{margin-right: 25px;}
+.mySubmit{float: none;margin-left:205px;margin-top: 20px;}
+.mySubmit:hover,.mySubmit:focus,.return:hover,.return:focus{color: #fff;text-decoration: none;}
+.myContent{margin:20px;position: relative;}
+.content{width: 34%;min-width:510px;margin: 0 auto;}
+.showPic{width: 510px;height: 370px;border:2px solid #efefef;background: #fff}
+.showPic .inner{width: 480px;height: 345px;background-color: #f4f5f7;margin: 12.5px auto;}
+.content span:first-child{margin-left: 35px;display:inline-block;margin-top: 30px;}
+.upLoadPic{display: inline-block;margin-left:195px;margin-top: 15px;}
+.content form{margin-left: 35px;margin-top: 15px;}
+*/
+/*leftNav*/
+/*
+.leftNav{width: 220px;}
+.leftNav ul{}
+.leftNav ul li{display: block;font-weight: bold;padding-left: 60px;height: 40px;line-height: 40px;background: url("../assets/img/second.png")no-repeat 40px center}
+.leftNav ul li a{color: #629cb7;}
+.leftNav ul span{cursor: pointer;color:#5e7187;display: inline-block;line-height:40px;height:40px;font-size: 16px;font-family:"Hiragino Sans GB W6";font-weight: bold;background: url("../assets/img/first.png") no-repeat 20px center;padding-left: 52px;}
+.machineVision,.naturalLanguage{margin-top: 5px;}
+.showAndHide{display: inline-block;width:100px;height:24px;background: url("../assets/img/show.png")no-repeat 79px 10px; vertical-align: -4px;}
+.showAndHide2{display: inline-block;width:70px;height:24px;background: url("../assets/img/show.png")no-repeat 47px 8px;vertical-align: -6px; }
+
+
+
+.startRecognition{margin-top: 22px;margin-left: 2%;}
+.photoForRecognition{margin-top: 12px;margin-left: 2%;}
+.showPhotoForRecognition{width: 98%;height:500px;box-shadow: 0 0 10px #ccc; ;margin: 0 auto;margin-bottom:10px;background: #fff}
+.photoForRecognitionTitle .text-info{font-size: 20px;font-weight: bold;line-height: 45px;}
+
+.contentPhoto{margin-left: 2%;}
+.contentPhotoBorder,.combinePhotoBorder{width: 98%;height:54vh;padding:20px;box-sizing: border-box;border: 2px solid #efefef;background: #fff}
+.contentPhotoContent,.combinePhotoContent{height:100%;background-color: #f4f5f7;}
+.chooseStyle{float: none;left: 45%;position: absolute;}
+.styleRound{float: none;left: 56%;position: absolute;}
+.chooseStyleContent{width: 90px;height: 90px;position: absolute;box-shadow: 0 0 10px #eee;left: 45.5%;top: 15%;background: #fff}
+.contentPhoto,.myArrow,.combinePhoto{float: left;font-size: 16px;font-weight: 600;}
+.contentPhoto,.combinePhoto{width: 42%;}
+.myArrow{margin-top: 285px;width: 12%;text-align: center;}
+.contentPhoto span,.combinePhoto span{display: inline-block;height:40px;color:#31708f}
+
+.myContent .content .form-inline label{color: #666;}
+
+.modalBtn{width: 100px;height: 30px;display: inline-block;background-color: #7cd434!important;text-decoration: none;color:#fff;border-radius: 50px;text-align: center;line-height: 30px;cursor: pointer;margin: 3px 10px;}
+.modalBtn:hover,.modalBtn:focus{text-decoration: none;color: #fff;}
+.modal-footer{text-align: center!important;border-top: none!important;}
+.modal-body{margin-top: 20px;}
+.modal-body img{width: 145px;height: 145px;margin-bottom: 22px;}
+
+.produce{width: 100px;height: 30px;font-size: 14px;display: inline-block;background-color: #7cd434!important;text-decoration: none;color:#fff;border-radius: 50px;text-align: center;line-height: 32px;cursor: pointer;margin: 3px 0 14px;}
+.produce:hover,.produce:focus{text-decoration: none;color: #fff;}
+.computedTitle{margin-bottom: 10px;}
+.computedTitle .produce{float: right;}
+.myContent .col-lg-6{margin-top: 20px;}
+.myContent .col-lg-6 span{color: #666}
+.myContent .col-lg-6 p{margin-top: 10px;margin-bottom: 15px;color: #666;}
+.myContent .col-lg-6 input{color: red;font-weight: bold;width: 130px;height: 30px;outline: none;text-align: center;}
+.myContent .col-lg-6 input:focus{border: 1px solid #999}
+*/
